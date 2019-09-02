@@ -1,3 +1,17 @@
+"""
+Open two windows, one is used to register sales and control the app,
+the other one is purely visual, projected on screen during parties.
+The drink prices varies according to the number of sales of each teams.
+Sales are recorded in res\Data_All.
+res\Data_Current keeps track of the game even if the app is closed.
+
+author : Arthur FINDELAIR, github.com/ArthurFDLR
+date : February 2019
+version : 10
+Python 3.7.2
+"""
+
+
 import sys
 import threading
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -590,7 +604,6 @@ class Ui_MainWindow(QMainWindow):
             timer.start()
         else:
             self.imageLbl_Alarm.setVisible(False)
-
 
 class Ui_ControlWindow(QMainWindow):
     def __init__(self):
