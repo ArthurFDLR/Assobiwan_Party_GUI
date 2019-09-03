@@ -47,7 +47,7 @@ NBR_VENTE_PALIER = 5
 # Nbr_verre_lutte = variable variant de -5 a 5 : +1 si achat des Jedi, -1 si achat des sith, modification des prix si atteint +5 ou -5
 
 def Get_Nbr_verre_lutte():
-    fichier_data = open('res/Data_Current.txt', "r")  # Data_All : Nbr_verre_lutte ; Prix_Jedi ; Prix_Sith
+    fichier_data = open('res/Data_Current.txt', "r")  # Data_All : Nbr_verre_lutte ; Prix_Jedi ; Prix_Sith ; Val_BarProgress
     data = fichier_data.readlines()
     Nbr_verre_lutte = data[0].split(";")[0]
     fichier_data.close()

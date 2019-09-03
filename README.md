@@ -1,33 +1,29 @@
 # Assobiwan's drink sales manager
 
 
-Application used during ENSMA parties to record sales and adapt price over each teams consumption.
+Application used during ISAE-ENSMA's parties to record sales and adapt price over each teams drinks consumption.
 
+Use [pipenv](https://pypi.org/project/pipenv/) with Pipfile provided to create an adequate Python interpreter.
+
+
+## App's principal
 The main window is projected behind the bar, the control window is used by bartenders to register sales.
-
+Tha app displays in real-time the prices of drinks for each teams, Jedis and Siths. The prices varies between 0.80€ and 1.20€ by 0.05€ steps. Prices fluctuate according to a +1/-1 system. A team win a point when one of its member buy a drink, it lose one when the other team get a drink. The 5ct fluctuation affect the prices when a team reachs 5 points. This limit and the size of the main window can be modified with those variables.
+```python
+   NBR_VENTE_PALIER = 5
+   TAILLE_FENETRE = 0.5
+```
 ![Main window](img\MainWindow.PNG)
+
+## Invasion mode
+
+To activate Invasion Mode, click "mode invasion" on the control pannel, click once again to deactivate. During Invasion, prices are set to 1.00€ (regardless of each teams scores). However points are still evolving. Thus prices are differents at the end of Invasion mode from what they used to be at the begining. This mode is used when a team buy a lot of drinks at 0.80€ to avoid financial deficit.
+
+## Control pannel
+
+When a bartender sells a drink, he needs to click "+1 pour les Siths/Jedis" according to the team of the buyer (blue or red wristband). Considerables orders can be displayed, select the team, the number of drinks, the name of the person, click "Go".
+All infos are recorded in the log window.
+The button "Reinitialisation de la partie" erases all data to restart a game. A confirmation pop-up is used as security.
+The button "Totale des ventes" display in logs the current total sales.
+
 ![Control window](img\ControlWindow.PNG)
-
-## Principe de base
-
-Permet d'afficher en temps reelle les prix des verres de cocktails de deux equipes, Jedi et Sith.
-Les prix varient de 0.80€ à 1.20€ par 5ct. Le changement de prix repose sur un systeme de +1/-1.
-Une equipe gagne 1 point quand elle achete un verre et en perd 1 quand l'adversaire en achete un.
-Une baisse de 5ct est accordé lorsque l'equipe atteint 5 points.
-(En partant de 0, si les Siths achetent 4 verres, les Jedi doivent en acheter 9 pour baisser le prix)
-
-
-## Invasion
-
-Pour activer l'invasion, cliquer sur le bouton "mode invasion" du panneau de commande, de même pour la désactiver.
-Dans ce mode, le prix est fixé à 1€ pour les deux equipes. Cependant, les prix continuent d'evoluer de maniere cachée.
-En fin d'invasion, les prix de ventes sont à nouveaux ceux ayant évolué du début de l'invasion.
-
-## Panneau de commande
-
-Lorsque vous vendez un verre, cliquez sur "+1 pour les Siths" ou "+1 pour les Jedis".
-(Il est aussi possible de cliquer sur le logo de l'équipe correspondante dans la fenetre d'affichage)
-Vous pouvez afficher une grosse commande d'un ensmatique en séléctionnant son équipe, 
-le nombre de verres achetés et son nom puis en appuyant sur "Go" sous les boutons de ventes.
-(Possibilité d'en faire une concours des plus grosses commandes ...)
-Un clique sur "Total des ventes" affiche le total des ventes de la soirée 

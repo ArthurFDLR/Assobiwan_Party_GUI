@@ -1,7 +1,7 @@
 # My ignore
 
 GitIgnore
-
+.idea
 
 
 # Byte-compiled / optimized / DLL files
