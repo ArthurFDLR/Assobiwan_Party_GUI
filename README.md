@@ -13,7 +13,7 @@ Tha app displays in real-time the prices of drinks for each teams, Jedis and Sit
    NBR_VENTE_PALIER = 5
    TAILLE_FENETRE = 0.5
 ```
-![Main window](img\MainWindow.PNG)
+![Main window](MainWindow.PNG)
 
 ## Invasion mode
 
@@ -26,4 +26,4 @@ All infos are recorded in the log window.
 The button "Reinitialisation de la partie" erases all data to restart a game. A confirmation pop-up is used as security.
 The button "Totale des ventes" display in logs the current total sales.
 
-![Control window](img\ControlWindow.PNG)
+![Control window](ControlWindow.PNG)
